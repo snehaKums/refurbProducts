@@ -19,11 +19,11 @@ const Home = ({homeData,mainData}) => {
          : 
           null
       ))}
-       {/* <Container fluid className="mt-3 ml-15">
+       <Container fluid className="mt-3 ml-15">
          <h1 className="font-medium text-4xl mb-6">Categories</h1>
           <Row>
             <Col>
-              <Row>    */}
+              <Row>   
                 {homeData.map( data => (
                   (data.__component == "select.categories") ?
                   <Col md={4} lg={3}>
@@ -32,10 +32,10 @@ const Home = ({homeData,mainData}) => {
                   :
                   null
                 ))}
-              {/* </Row>
+              </Row>
             </Col>
           </Row>
-        </Container> */}
+        </Container>
        {homeData.map( data => (
           (data.__component == "select.rich-text") ? 
             <div className="textDiv">
