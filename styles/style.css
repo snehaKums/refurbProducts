@@ -1,0 +1,167 @@
+.btn {
+  @apply py-2 px-4 font-semibold rounded-lg shadow-md;
+}
+.btn-gray {
+  @apply text-white bg-gray-500 hover:bg-gray-700;
+}
+body { 
+  margin: 0 auto !important;
+  width: 100%;
+  font-family: Verdana,Arial,Trebuchet,"Trebuchet MS",Helvetica,Sans-Serif;
+}
+.aboutHeader{
+  font-size: 32px;
+}
+.subHeader{
+  margin-top: 2%;
+  font-size: 28px;
+  font-weight: bold;
+}
+.desp{
+  margin-top: 2%;
+  font-size: 22px;
+  letter-spacing: .448px;
+  line-height: 30px;
+}
+.card{
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.card-horizontal {
+  display: flex;
+  flex: 1 1 auto;
+}
+.button {
+  background-color: #6c63ff; 
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 8px;
+  margin-top: 30px;
+  text-align: center;
+}
+ .wrapper{
+   margin-top: -3.5%;
+ }
+ .heroComponent,.articleComponent,.textDiv{
+  display: flex;
+  position: relative;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.textStyle{
+  width: 55%;
+  height: 50%;
+  padding-top: 10%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.textSide{
+  width: 55%;
+  height: 50%;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+.imgStyle{
+  width: 40%;
+  height: 50%;
+  padding-top: 3%;
+}
+.imgSide{
+  width: 40%;
+  height: 50%;
+  margin-left: 5%;
+}
+.descp{
+  font-size: 24px;
+  letter-spacing: .448px;
+  line-height: 30px;
+}
+.pb {
+  background-color: #6c63ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size:22px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 10%;
+  margin-top: 3%;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .button{
+    margin-bottom: 20px;
+  }
+  .imgStyle,.imgSide{
+    padding-top: 6%;
+  }
+  .pb{
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+}
+ @media only screen and (max-width: 600px) {
+  .aboutHeader{
+    text-align: center;
+  }
+  .card-horizontal{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .img-square-wrapper{
+    order: 1;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+  }
+  .button{
+    font-size: 18px;
+    margin-right: 8px;
+  }
+  .heroComponent,.articleComponent,.textDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .textStyle{
+    width: 90%;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    order: 1;
+  }
+  .textSide{
+    width: 90%;
+    padding-top: 2%;
+    order: 1;
+  }
+  .imgStyle,.imgSide{
+    padding-top: 6%;
+    order: 2;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 100%;
+  }
+  .descp{
+    font-size: 18px;
+    text-align: center;
+  }
+  .pb{
+    margin:auto;
+    display:block;
+    order: 3;
+    font-size:16px;
+    padding: 10px 22px;
+    text-decoration: none;
+  }
+} 

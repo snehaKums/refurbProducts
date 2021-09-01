@@ -1,0 +1,23 @@
+.footer {
+    height: 5rem;
+    color:black;
+    justify-content: center;
+    align-items: baseline;
+    display: flex;
+}
+.footerText{
+    margin-top: 1.8%;
+}
+@media only screen and (max-width: 1024px) {
+.footerText{
+    margin-top: 3.2%;
+}
+}
+@media only screen and (max-width: 600px) {
+.footer{
+    height: 3.5rem;
+}
+.footerText{
+    margin-top: 3.2%;
+}
+} 
