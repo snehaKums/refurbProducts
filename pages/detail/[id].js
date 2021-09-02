@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async(context) =>{
   const productId = context.params.id;
-  const res = await axios.get(process.env.API_MAIN_URL+'/3');
+  const res = await axios.get(process.env.API_MAIN_URL+'/2');
   const data = res.data.products;
   const resp = await axios.get(process.env.API_MAIN_URL);
   const mainData= resp.data
