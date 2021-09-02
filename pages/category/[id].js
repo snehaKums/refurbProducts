@@ -78,6 +78,7 @@ const Details = ({data,mainData}) => {
               : 
               null
     ))}
+    hello
   </div>
   );
 
