@@ -15,6 +15,7 @@ export default function Product({postNum,search}){
                         <Row>    
                             {search.slice(0, postNum).map(item => (
                             <Col key={item.id} md={4} lg={3}>
+                                <a href={'/detail/' + item.id} className="hover:no-underline">
                                 <div className={styles.card}>
                                 <Image
                                     alt={item.image.name}
@@ -24,10 +25,8 @@ export default function Product({postNum,search}){
                                     />
                                     <h1 className={styles.cardText}>{item.title}</h1>
                                     <p className={styles.cardSubtext}>Price: Rs. {item.price}</p>
-                                     <a href={'/detail/' + item.id} className=" my-3 btn text-blue-600 with-arrow hover:underline">
-                                        Detail
-                                    </a>
                                 </div>
+                                </a>
                             </Col>
                             ))}
                         </Row>

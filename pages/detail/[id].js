@@ -2,8 +2,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
-import styles from './detail.module.css'
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col} from 'reactstrap';
 
 export const getStaticPaths = async () => {
     const res = await axios.get(process.env.API_PRODUCTS_URL);
@@ -51,10 +50,8 @@ const Details = ({product,mainData,productData}) => {
     <div>
         <Header data={mainData} />
           <div className="container mt-8">
-            <h1 className="text-4xl my-8">{product.title}</h1>
-            <div className="grid grid-cols-3 gap-4">
-
-            <div >
+            <div className="sm:grid grid-cols-3 gap-4">
+            <div className="-my-5">
             <Image
                   alt={product.image.name}
                   src={product.image.formats.medium.url}
@@ -63,19 +60,21 @@ const Details = ({product,mainData,productData}) => {
             />
             </div>
 
-            <div className="col-span-2 pr-4">
+            <div className="sm:col-span-2 pr-4">
            
+            <h1 className="text-2xl font-bold my-8">{product.title}</h1>
 
-            <p className={styles.detailPrice}>Price : Rs. {product.price}</p>
-            <p className={styles.description}>{product.description}</p>
-            <p className={styles.contactDetails}>Contact Details of Seller</p>
-            <div className={styles.contactDiv}>
-              <p className={styles.addressLabel}>Address:</p>
-              <p className={styles.address}>{product.address}</p>
+            <p className="text-xl font-semibold my-2">Rs. {product.price}</p>
+              <p className="text-xl	text-indigo-500	my-2">Features</p>
+              <p className="text-lg	my-2">{product.description}</p>
+            <p className="text-xl	text-indigo-500	my-2">Contact Details of Seller</p>
+            <div className="flex flex-row">
+              <p className="text-lg font-medium	my-2 mr-2">Address:</p>
+              <p className="text-lg	my-2">{product.address}</p>
             </div>
-            <div className={styles.contactDiv}>
-              <p className={styles.phoneNoLabel}>Phone No:</p>
-              <p className={styles.phoneNo}>{product.phoneNo}</p>
+            <div className="flex flex-row">
+              <p className="text-lg	font-medium		my-2 mr-2">Phone No:</p>
+              <p className="text-lg	my-2">{product.phoneNo}</p>
             </div>
 
             </div>
@@ -86,25 +85,29 @@ const Details = ({product,mainData,productData}) => {
           <div className="container mt-8">
               <h3 className="text-2xl py-4">Similar Products</h3>
               <div>
-                <Container fluid>
+                <Container>
                   <Row>
                     <Col xs={12} sm={12} md={12} lg={12}>
                     <Row>    
                     {products[0].product.map(product=>(
-                        <Col key={product.id} md={4} lg={3}>
-                            <div className={styles.card} >
+                      <div className="flex space-x-5">
+                          <Col key={product.id} md={4} lg={3}>
+                            <div className="box-border h-90 w-60 p-2 border-2" >
                               <a  href={'/detail/' + product.id} className="hover:no-underline" >
-                            <h1 className={styles.cardText}>{product.title}</h1>
-                            <Image
-                                alt={product.image.name}
-                                src={product.image.formats.small.url}
-                                width={130}
-                                height={150}
-                            />
-                              <p className={styles.cardSubtext}>Price: Rs. {product.price}</p>
+                              <h1 className="text-center truncate">{product.title}</h1>
+                              <div className="flex flex-col justify-center items-center">
+                              <Image
+                                  alt={product.image.name}
+                                  src={product.image.formats.small.url}
+                                  width={130}
+                                  height={150}
+                              />
+                              </div>
+                              <p className="text-center -mt-1">Price: Rs. {product.price}</p>
                               </a>
                             </div>
                         </Col>
+                      </div>
                         ))}
                     </Row>
                     </Col>

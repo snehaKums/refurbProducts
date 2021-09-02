@@ -19,8 +19,8 @@ const Home = ({homeData,mainData}) => {
          : 
           null
       ))}
-       <Container fluid className="mt-3 ml-15">
-         <h1 className="font-medium text-4xl mb-6">Categories</h1>
+       <Container className="mt-3 ml-15">
+         <h1 className="font-medium text-2xl mb-6">Categories</h1>
           <Row>
             <Col>
               <Row>   

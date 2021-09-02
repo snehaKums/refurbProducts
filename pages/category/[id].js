@@ -44,9 +44,6 @@ const Details = ({data,mainData}) => {
   return (
     <div>
       <Header data={mainData} />
-      {/* {data.products.length === 0 ?
-            <h1 className={styles.noDataFound}>No Products found in this category</h1>
-        : */}
         <Container fluid className="container mt-8 min-h-screen" >
         <Row>
             <Col xs={12} sm={12} md={12} lg={12}>
@@ -54,6 +51,7 @@ const Details = ({data,mainData}) => {
                 {data.products != undefined ? 
                 data.products.map(item => (
                   <Col key={item.id} md={4} lg={3}>
+                     <a href={'/detail/' + item.id} className="hover:no-underline">
                       <div className={styles.card}>
                       <Image
                           alt={item.image.name}
@@ -63,10 +61,9 @@ const Details = ({data,mainData}) => {
                           />
                           <h1 className={styles.cardText}>{item.title}</h1>
                           <p className={styles.cardSubtext}>Price: $ {item.price}</p>
-                          <a href={'/detail/' + item.id } className=" my-3 btn text-blue-600 with-arrow hover:underline">
-                              Detail
-                          </a>
                       </div>
+                      </a>
+
                   </Col>
                   )) :
                   null}
