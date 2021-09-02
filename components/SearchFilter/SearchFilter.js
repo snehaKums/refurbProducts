@@ -23,7 +23,7 @@ export default function SearchAndFilter({value,search,filter}){
                             <option value="Mobile Phones">Mobile Phones</option>
                             <option value="Laptops">Laptops</option>
                             <option value="Home Appliances">Home Appliances</option>
-                            {/* <option value="womenwear">Womens clothing</option> */}
+                            <option value="headphones">Headphones/Earphones</option>
                         </select>
                         <span className={styles.focus}></span>
                     </div>
