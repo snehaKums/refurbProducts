@@ -19,24 +19,7 @@ const Home = ({homeData,mainData}) => {
          : 
           null
       ))}
-       <Container className="mt-3 ml-15">
-         <h1 className="font-medium text-2xl mb-6">Categories</h1>
-          <Row>
-            <Col>
-              <Row>   
-                {homeData.map( data => (
-                  (data.__component == "select.categories") ?
-                  <Col md={4} lg={3}>
-                    <ProductCategory data={data}  />
-                  </Col>
-                  :
-                  null
-                ))}
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-       {homeData.map( data => (
+      {homeData.map( data => (
           (data.__component == "select.rich-text") ? 
           <div>
           {data.image ? 
@@ -57,16 +40,32 @@ const Home = ({homeData,mainData}) => {
           </div>
           :
           <div className="ml-5 mr-5">
-              <p className="font-medium text-2xl mb-6">{data.heading}</p>
+              <p className="font-medium text-3xl text-center mt-4 mb-6">What is Refurb?</p>
               <h3>{data.subHeading}</h3>
-              <p className="text-xl mb-6">{data.description}</p>
+              <p className="text-xl text-center	mb-6">{data.description}</p>
           </div>
           }
       </div>
                 : 
               null
         ))}
-         
+       <Container className="mt-3 ml-15">
+         <h1 className="font-medium text-2xl mb-6">Categories</h1>
+          <Row>
+            <Col>
+              <Row>   
+                {homeData.map( data => (
+                  (data.__component == "select.categories") ?
+                  <Col md={4} lg={3}>
+                    <ProductCategory data={data}  />
+                  </Col>
+                  :
+                  null
+                ))}
+              </Row>
+            </Col>
+          </Row>
+        </Container>
      </div>
       {homeData.map( data => (
           (data.__component == "select.footer") ? 
