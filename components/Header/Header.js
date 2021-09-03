@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavLink} from 'reactstrap';
 import Image from 'next/image';
-// import styles from './header.module.css'
 
 const Header = ({data}) => {
   return (

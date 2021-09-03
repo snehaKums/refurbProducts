@@ -26,8 +26,8 @@ const Home = ({homeData,mainData}) => {
           <div className="sm:flex relative pl-80  ml-20">
               <div className="	sm:w-6/12	h-6/12 px-px">
               <p className="font-medium text-2xl mb-6">{data.heading}</p>
-              <h3>{data.subHeading}</h3>
-              <p className="text-xl mb-6">{data.description}</p>
+              <h3 className="font-medium text-xl mb-6">{data.subHeading}</h3>
+              <p className="text-xl">{data.description}</p>
               </div>
               <div className=" sm:w-3/5	h-3/4 ml-16	">
                   <Image
@@ -39,10 +39,10 @@ const Home = ({homeData,mainData}) => {
               </div>
           </div>
           :
-          <div className="ml-5 mr-5">
-              <p className="font-medium text-3xl text-center mt-4 mb-6">{data.heading}</p>
-              <h3>{data.subHeading}</h3>
-              <p className="text-xl text-center	mb-6">{data.description}</p>
+          <div className="w-6/12 ml-auto mr-auto mt-10 mb-10">
+            <p className="font-medium text-3xl text-center mt-4 mb-6">{data.heading}</p>
+                    <h3>{data.subHeading}</h3>
+              <p className="text-xl text-center mb-6">{data.description}</p>
           </div>
           }
       </div>
