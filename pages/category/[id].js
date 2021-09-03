@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { Container, Row, Col } from 'reactstrap';
 import Image from 'next/image';
-import styles from '../../components/Product/product.module.css'
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
@@ -52,18 +51,17 @@ const Details = ({data,mainData}) => {
                 data.products.map(item => (
                   <Col key={item.id} md={4} lg={3}>
                      <a href={'/detail/' + item.id} className="hover:no-underline">
-                      <div className={styles.card}>
-                      <Image
+                     <div className="text-center border rounded-md border-gray-300 border-solid p-2 -ml-1 mt-4 w-80">
+                        <Image
                           alt={item.image.name}
-                          src={item.image.formats.small?.url}
+                          src={item.image?.formats.small.url}
                           width={150}
                           height={170}
-                          />
-                          <h1 className={styles.cardText}>{item.title}</h1>
-                          <p className={styles.cardSubtext}>Price: $ {item.price}</p>
+                        />
+                        <h1 className="text-xl truncate	">{item.title}</h1>
+                        <p className="text-lg">Price: Rs. {item.price}</p>
                       </div>
                       </a>
-
                   </Col>
                   )) :
                   null}
