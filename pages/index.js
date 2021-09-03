@@ -40,7 +40,7 @@ const Home = ({homeData,mainData}) => {
           </div>
           :
           <div className="ml-5 mr-5">
-              <p className="font-medium text-3xl text-center mt-4 mb-6">What is Refurb?</p>
+              <p className="font-medium text-3xl text-center mt-4 mb-6">{data.heading}</p>
               <h3>{data.subHeading}</h3>
               <p className="text-xl text-center	mb-6">{data.description}</p>
           </div>
