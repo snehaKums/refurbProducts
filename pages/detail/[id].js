@@ -92,7 +92,7 @@ const Details = ({product,mainData,productData}) => {
                     {products[0].product.map(product=>(
                       <div key={product.id} className="flex space-x-5">
                           <Col md={4} lg={3}>
-                            <div className="box-border h-90 w-60 p-2 border-2" >
+                            <div className="box-border rounded-md h-90 w-60 p-2 border-2" >
                               <a  href={'/detail/' + product.id} className="hover:no-underline" >
                               <h1 className="text-center truncate">{product.title}</h1>
                               <div className="flex flex-col justify-center items-center">
