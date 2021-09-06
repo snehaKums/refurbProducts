@@ -51,7 +51,7 @@ const Details = ({data,mainData}) => {
                 data.products.map(item => (
                   <Col key={item.id} md={4} lg={3}>
                      <a href={'/detail/' + item.id} className="hover:no-underline">
-                     <div className="text-center border rounded-md border-gray-300 border-solid p-2 -ml-1 mt-4 w-80">
+                     <div className="text-center border rounded-md border-gray-300 border-solid p-2 -ml-1 mt-4 w-84">
                         <Image
                           alt={item.image.name}
                           src={item.image?.formats.small.url}
