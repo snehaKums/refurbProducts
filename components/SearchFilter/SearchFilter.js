@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SearchAndFilter({value,search,filter}){
     return(
-        <div className="relative flex min-w-full justify-center	-ml-36 space-x-7">
+        <div className="relative flex min-w-full justify-center space-x-7">
                         <input
                             type="search"
                             name="search-form"
