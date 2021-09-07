@@ -43,9 +43,12 @@ const Details = ({product,mainData,productData}) => {
   let products = [];
   for(let i=0;i<productData.length;i++){
     const data = productData[i]
-    if(product.title == data.title ){
-        products.push(data)
+    if(product.tag == data.tag ){
+      products.push(data)
   }}
+  let similarProducts = products.filter(function(prod) {
+    return prod.title != product.title;
+  });
   return (
     <div>
         <Header data={mainData} />
@@ -73,7 +76,7 @@ const Details = ({product,mainData,productData}) => {
               <p className="text-lg	my-2">{product.address}</p>
             </div>
             <div className="flex flex-row">
-              <p className="text-lg	font-medium		my-2 mr-2">Phone No:</p>
+              <p className="text-lg	font-medium	my-2 mr-2">Phone No:</p>
               <p className="text-lg	my-2">{product.phoneNo}</p>
             </div>
 
@@ -83,13 +86,13 @@ const Details = ({product,mainData,productData}) => {
 
           </div>
           <div className="container mt-8">
-              <h3 className="text-2xl py-4">Similar Products</h3>
+            <h3 className="text-2xl py-4">Similar Products</h3>
               <div>
                 <Container>
                   <Row>
                     <Col xs={12} sm={12} md={12} lg={12}>
                     <Row>    
-                    {products[0].product.map(product=>(
+                    {similarProducts.map(product=>(
                       <div key={product.id} className="flex space-x-5">
                           <Col md={4} lg={3}>
                             <div className="box-border rounded-md h-90 w-60 p-2 border-2" >
