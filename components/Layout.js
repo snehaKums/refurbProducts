@@ -10,7 +10,10 @@ function Layout (props)  {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-        {/* <link rel="manifest" href="/manifest.json" /> */}
+        <meta name="theme-color" content="#fff" />
+        <meta name="description" content="Product refurb website" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <link rel="manifest" href="/manifest.json" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
