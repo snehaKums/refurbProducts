@@ -78,9 +78,9 @@ const Home = ({homeData,mainData}) => {
 }
 export default Home;
 export async function getStaticProps(){
-    const res = await axios.get(process.env.API_MAIN_URL || 'https://pure-dawn-42818.herokuapp.com');
+    const res = await axios.get(process.env.API_MAIN_URL);
     const mainData = res.data;
-    const resp = await axios.get(process.env.API_HOME_URL || 'https://pure-dawn-42818.herokuapp.com');
+    const resp = await axios.get(process.env.API_HOME_URL);
     const homeData = resp.data.components;
    return {  
       props:{
